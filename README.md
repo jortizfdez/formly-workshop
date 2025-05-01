@@ -80,7 +80,7 @@ Esta sección incluye los siguientes campos:
 
 - **Descripción del bug**:
 
-  - **Type**: Texto.
+  - **Type**: Text-area..
 
   - **Required**: No.
 
@@ -88,15 +88,19 @@ Esta sección incluye los siguientes campos:
 
   - **Mensaje de error personalizado**: “Se requiere al menos <<nºletras>> caracteres”.
 
+  - **Nota** Crea un nuevo tipo de campo customizado llamado "text-area" con Formly usando el componente input Angular Material
+
 - **Pasos para reproducirlo**:
 
-  - **Type**: Texto.
+  - **Type**: Text-area.
 
   - **Required**: Sí.
 
   - **Validación**: Mínimo 100 caracteres.
 
   - **Mensaje de error personalizado**: “Se requiere al menos <<nºletras>> caracteres”.
+
+  - **Nota** Reutiliza el typo "text-area" creado en el paso anterior
 
 - **Geografía**:
 
