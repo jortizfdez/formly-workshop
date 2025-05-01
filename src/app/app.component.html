@@ -1,8 +1,38 @@
-
-<form  [formGroup]="scibForm">
-  <mat-slide-toggle formControlName="scibGlobal">Scib Global</mat-slide-toggle>
-</form>
+<div class="d-flex flex-row justify-content-between w-100">
+  <form [formGroup]="scibForm" class="d-flex flex-row gap-3 m-3">
+    <mat-slide-toggle formControlName="scibGlobal"
+      >Scib Global</mat-slide-toggle
+    >
+    <mat-form-field>
+      <mat-label>Select a language</mat-label>
+      <mat-select formControlName="language">
+        <mat-option *ngFor="let lang of languages" [value]="lang.value">{{
+          lang.viewValue
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <button class="btn btn-primary justify-content-end m-3" (click)="reset()">
+    Reset
+  </button>
+</div>
 
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <formly-form
+    [model]="model"
+    [fields]="fields"
+    [options]="options"
+    [form]="form"
+  ></formly-form>
 </form>
+
+<div class="d-flex flex-row gap-4 m-3 justify-content-between">
+  <div class="d-flex flex-row gap-2">
+    <h3 class="fw-bold">Model:</h3>
+    <pre class="p-3 bg-dark-subtle shadow-sm rounded">{{ formValuesJson }}</pre>
+  </div>
+  <div class="d-flex flex-row gap-2">
+    <h3 class="fw-bold">Is valid?:</h3>
+    <h3>{{ form.valid }}</h3>
+  </div>
+</div>
