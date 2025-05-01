@@ -32,38 +32,12 @@ export class AppComponent implements OnInit {
         {
           props: { label: 'Reporter' },
           fieldGroup: [
-            {
-              key: 'day',
-              type: 'input',
-              props: {
-                type: 'date',
-                label: 'Day of the trip',
-                required: true,
-              },
-            },
+            //Configura aqui la seccion 1
           ],
         },
         {
           props: { label: 'Detail' },
           fieldGroup: [
-            {
-              key: 'ee',
-              type: 'input',
-              props: {
-                type: 'date',
-                label: 'Day of the trip',
-                required: true,
-              },
-            },
-            {
-              key: 'age',
-              type: 'input',
-              props: {
-                type: 'date',
-                label: 'Day of the trip',
-                required: true,
-              },
-            },
             //Configura aqui la seccion 2
           ],
         },
