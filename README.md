@@ -20,7 +20,7 @@ Esta sección incluye los siguientes campos:
 
   - **Required**: Sí.
 
-  - **Validación**: Mínimo 3 caracteres y debe empezar por una 'N' o 'X'.
+  - **Validación (BONUS)**: Mínimo 3 caracteres y debe empezar por una 'N' o 'X' .
 
 - **Email**:
 
@@ -30,7 +30,7 @@ Esta sección incluye los siguientes campos:
 
   - **Validación**: Se requiere una validación, el texto introducido debe terminar en (`@gruposantander.es`).
 
-- **Tipo de empleado**:
+- **Tipo de empleado (BONUS)**:
 
   - **Type**: Text.
 
@@ -40,7 +40,6 @@ Esta sección incluye los siguientes campos:
 
   - **Valor**: Si **Número de empleado** empieza por N el valor será igual a `Interno` si no `Externo`
 
-  - **Opciones**: Se recuperará la lista de roles de un servicio que contiene la funcion (`getRoles`).
 
 - **Rol del informador**:
 
@@ -76,11 +75,11 @@ Esta sección incluye los siguientes campos:
 
   - **Required**: Sí.
 
-  - **Validación**: Mínimo 3 caracteres.
+  - **Validación (BONUS)**: Mínimo 3 caracteres.
 
 - **Descripción del bug**:
 
-  - **Type**: Text-area..
+  - **Type**: Text-area.
 
   - **Required**: No.
 
@@ -89,18 +88,6 @@ Esta sección incluye los siguientes campos:
   - **Mensaje de error personalizado**: “Se requiere al menos <<nºletras>> caracteres”.
 
   - **Nota** Crea un nuevo tipo de campo customizado llamado "text-area" con Formly usando el componente input Angular Material
-
-- **Pasos para reproducirlo**:
-
-  - **Type**: Text-area.
-
-  - **Required**: Sí.
-
-  - **Validación**: Mínimo 100 caracteres.
-
-  - **Mensaje de error personalizado**: “Se requiere al menos <<nºletras>> caracteres”.
-
-  - **Nota** Reutiliza el typo "text-area" creado en el paso anterior
 
 - **Geografía**:
 
@@ -113,6 +100,18 @@ Esta sección incluye los siguientes campos:
   - **Options**: `[ES, GB, PT, GLOBAL]`.
 
   - **Preasignar valor**: `GLOBAL` si el switch **SCIB Global** está activado.
+ 
+- **Pasos para reproducirlo (BONUS)**:
+
+  - **Type**: Text-area.
+
+  - **Required**: Sí.
+
+  - **Validación**: Mínimo 100 caracteres.
+
+  - **Mensaje de error personalizado**: “Se requiere al menos <<nºletras>> caracteres”.
+
+  - **Nota** Reutiliza el typo "text-area" creado en el paso anterior
 
 ---
 
@@ -125,6 +124,8 @@ Esta sección incluye los siguientes campos:
   - **Type**: Texto.
 
   - **Required**: Sí.
+    
+  - **Preasignar valor**: `GLOBAL` si el switch **SCIB Global** está activado.
 
 - **Entorno**:
 
@@ -150,7 +151,7 @@ Esta sección incluye los siguientes campos:
 
     - Si Entorno es `PRE`: `[CAT C, CAT D]`.
 
-- **Cliente**:
+- **Cliente (BONUS)**:
 
   - **Type**: Switch.
 
@@ -172,7 +173,9 @@ Esta sección incluye los siguientes campos:
 
   - **Options**: `[Grave, Medio, Bajo]`.
 
-  - **Readonly**: Si es una aplicación cliente y el Entorno es `PRO`.
+  - **Readonly**: TRUE si el switch **SCIB Global** está activado.
+    
+  - **Readonly Bonus**: TRUE Si es una aplicación **cliente**, el Entorno es **PRO** y **SCIB Global** está activado.
 
   - **Autocompletar valor**: `Grave` si es una aplicación cliente y el Entorno es `PRO`.
 
@@ -206,9 +209,8 @@ Esta sección incluye los siguientes campos:
 
 En esta seccion el usuario a pedido que el formulario se divida en dos acordeones.
 En el primer acordeón el titulo será "Documentación", al desplegarse aparecerán los campos **Adjuntos** y **Número de adjuntos**
-En un segundo acordeón se mostrará el titulo "Extra", al desplegarse aparecerá el campo **Enlace**.
-
 Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el componente Expansion Panel de Angular Material
+(BONUS) En un segundo acordeón se mostrará el titulo "Extra", al desplegarse aparecerá el campo **Enlace**.
 
 - **Adjuntos**:
 
@@ -227,6 +229,8 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
   - **Oculto**: Si el checkbox **Adjuntos** está desactivado.
 
   - **Required**: Si el checkbox **Adjuntos** está activado.
+    
+  - **Preasignar valor (1)**: `1` si el switch **SCIB Global** está activado.
 
   - **Validaciones**:
 
@@ -240,7 +244,7 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 
     - Si es menor que 1: “El mínimo de adjuntos es 1”.
 
-- **Enlace**:
+- **Enlace (BONUS)**:
 
   - **Type**: Texto.
 
@@ -252,16 +256,14 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 
 ---
 
-## Requerimientos Generales
+## Bonus
 
 - Todos los campos requeridos deben mostrar el mensaje: **“Campo requerido”** si no son validos
 
-- Se ha incluido el boton **reset** al finalizar todas las acciones se debera incluir la logica de Formly que permite resetear el valor de los formularios
+- Se ha incluido el boton **reset**, al finalizar todas las acciones se debera incluir la logica de Formly que permite resetear el valor de los formularios
 
-- Ciertos campos de las secciones 4 y 5 dependen de los valores seleccionados en la sección 3. Hasta que no se llegue a la integración se puede utilizar o simular un valor por defecto
-
-## Bonus (opcional)
-
+- Ciertos campos de las secciones 4 y 5 dependen de los valores seleccionados en la sección 3. Hasta que no se integren todos las features simula un valor por defecto
+  
 - Si el switch **SCIB Global** está activado, todos los inputs deben tener un color rojo; de lo contrario, azul
 
 - Utilizar el servicio de traducciones para que los label de cada campo cambien segun en idioma seleccionado
