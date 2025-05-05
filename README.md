@@ -12,7 +12,11 @@
 7. Al teminar hará commit y push pulsando el bóton azul de la parte superior izquierda
    ![image](https://github.com/user-attachments/assets/3c36eb1e-5339-4019-84d5-b84afd4a2676)
 8. Se mergearán las ramas de las diferentes secciones y se hara una prueba en conjunto del formulario
-9. El formulario deberá cumplir con todos los requisitos
+9. El formulario deberá cumplir con todos los requisitos. Todos los requerimientos bonus finalizados serán valorados positivamente
+
+> El proyecto tiene ya instalado Angular Material 16 [https://material.angular.dev/](https://v16.material.angular.dev/) . Puedes utilizar los elementos nativos de HTML o importar los de Material (exceptuando en aquellos ejercicios donde sea obligatorio utilizar material). Tambien incluye por defecto bootstrap https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+
 
 ## Caso Práctico
 
@@ -29,7 +33,7 @@ El cliente ha solicitado un formulario dividido en **5 secciones**: **Informador
 
 ## Requerimientos del Formulario
 
-### **1. Informador**
+### **1. Informador** 
 
 Esta sección incluye los siguientes campos:
 
@@ -40,25 +44,6 @@ Esta sección incluye los siguientes campos:
   - **Required**: Sí.
 
   - **Validación (BONUS)**: Mínimo 3 caracteres y debe empezar por una 'N' o 'X' .
-
-- **Email**:
-
-  - **Type**: Texto.
-
-  - **Required**: Sí.
-
-  - **Validación**: Se requiere una validación, el texto introducido debe terminar en (`@gruposantander.es`).
-
-- **Tipo de empleado (BONUS)**:
-
-  - **Type**: Text.
-
-  - **Oculto**: Sí **Número de empleado** no es un valor valido.
-
-  - **Readonly**: Si **Número de empleado** valido.
-
-  - **Valor**: Si **Número de empleado** empieza por N el valor será igual a `Interno` si no `Externo`
-
 
 - **Rol del informador**:
 
@@ -81,10 +66,28 @@ Esta sección incluye los siguientes campos:
   - **Readonly**: Si el Número de empleado coincide con alguna de las opciones.
 
   - **Valor**: Si el Número de empleado es igual a `n1111` o `n2222` se rellenará con uno de estos valores.
+    
+- **Email (BONUS)**:
+
+  - **Type**: Texto.
+
+  - **Required**: Sí.
+
+  - **Validación**: Se requiere una validación, el texto introducido debe terminar en (`@gruposantander.es`).
+
+- **Tipo de empleado (BONUS)**:
+
+  - **Type**: Text.
+
+  - **Oculto**: Sí **Número de empleado** no es un valor valido.
+
+  - **Readonly**: Si **Número de empleado** valido.
+
+  - **Valor**: Si **Número de empleado** empieza por N el valor será igual a `Interno` si no `Externo`
 
 ---
 
-### **2. Detalles**
+### **2. Detalles** 
 
 Esta sección incluye los siguientes campos:
 
@@ -134,7 +137,7 @@ Esta sección incluye los siguientes campos:
 
 ---
 
-### **3. Entorno**
+### **3. Entorno** 
 
 Esta sección incluye los siguientes campos:
 
@@ -180,7 +183,7 @@ Esta sección incluye los siguientes campos:
 
 ---
 
-### **4. Prioridad**
+### **4. Prioridad** 
 
 Esta sección incluye los siguientes campos:
 
@@ -216,7 +219,7 @@ Esta sección incluye los siguientes campos:
 
   - **Type**: Checkbox.
 
-  - **Oculto**: Si Prioridad no es igual a `Alta` o `Muy alta`.
+  - **Oculto**: TRUE Si Prioridad no es igual a `Alta` o `Muy alta`.
 
   - **Valor por defecto**: Activado.
 
@@ -224,7 +227,7 @@ Esta sección incluye los siguientes campos:
 
 ---
 
-### **5. Información Adicional**
+### **5. Información Adicional** 
 
 En esta seccion el usuario a pedido que el formulario se divida en dos acordeones.
 En el primer acordeón el titulo será "Documentación", al desplegarse aparecerán los campos **Adjuntos** y **Número de adjuntos**
@@ -249,7 +252,7 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 
   - **Required**: Si el checkbox **Adjuntos** está activado.
     
-  - **Preasignar valor (1)**: `1` si el switch **SCIB Global** está activado.
+  - **Preasignar valor (Bonus)**: `1` si el switch **SCIB Global** está activado.
 
   - **Validaciones**:
 
@@ -284,6 +287,8 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 - Si el switch **SCIB Global** está activado, todos los inputs deben tener un color rojo; de lo contrario, azul
 
 - Utilizar el servicio de traducciones para que los label de cada campo cambien segun en idioma seleccionado
+
+- La maquetación tambien sera evaluada positivamente
 
 ¡Manos a la obra! 🚀
 
