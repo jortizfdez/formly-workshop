@@ -3,16 +3,15 @@
 
 ## Workflow
 
-1. Cada lider del equipo debera hacer un fork de este proyecto
-2. Añadirá como colaboradores a los diferentes miembros del equipo
-3. Creará una rama por seccion
-4. Importará el proyecto en **StackBlitz**
-5. Para acceder al proyecto los miembros del equipo deberan acceder a https://stackblitz.com/github/<<nombre_cuenta_lead>>/<<nombre_repositorio>>
-6. Cada miembro se situará en la rama correspondiente y desarrollará su tarea
-7. Al teminar hará commit y push pulsando el bóton azul de la parte superior izquierda
-   ![image](https://github.com/user-attachments/assets/3c36eb1e-5339-4019-84d5-b84afd4a2676)
-8. Se mergearán las ramas de las diferentes secciones y se hara una prueba en conjunto del formulario
-9. El formulario deberá cumplir con todos los requisitos. Todos los requerimientos bonus finalizados serán valorados positivamente
+1. Cada lider del equipo deberá hacer un fork de este proyecto en Github
+2. Añadirá como colaboradores a los diferentes miembros del equipo y estos aceptaran la invitación.
+3. Los miembros del equipo deberan acceder a https://stackblitz.com/github/<<nombre_cuenta_lead>>/<<nombre_repositorio>> habiéndose logado con su cuenta de github.
+4. Desde la pantalla de desarrollo accederán a Dashboard <img width="345" alt="image" src="https://github.com/user-attachments/assets/0d90c470-29ba-46e8-8ed6-625d9790e83b" />
+5. Una vez en el dashboard seleccionaremos el repositorio de nuestro lead <img width="435" alt="image" src="https://github.com/user-attachments/assets/48b7a38e-363a-46b6-84c9-f0dcf7f75072" />
+6. Desde la terminal crearemos nuestra feature (git checkout -b feature/<<nombre_branch>>) e iremos desarrollando nuestro cambios. <img width="562" alt="image" src="https://github.com/user-attachments/assets/ab6dd427-1709-4b81-b8c8-a61e89131208" />
+8. Al teminar el desarrollo haremos commit o pull request pulsando el bóton azul de la parte superior izquierda
+9. Desde Github Se mergearán las ramas de las diferentes secciones y se hara una prueba en conjunto del formulario
+10. El formulario deberá cumplir con todos los requisitos. Todos los requerimientos bonus finalizados serán valorados positivamente
 
 > El proyecto tiene ya instalado Angular Material 16 [https://material.angular.dev/](https://v16.material.angular.dev/) . Puedes utilizar los elementos nativos de HTML o importar los de Material (exceptuando en aquellos ejercicios donde sea obligatorio utilizar material). Tambien incluye por defecto bootstrap https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
