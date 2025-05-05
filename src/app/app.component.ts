@@ -80,7 +80,7 @@ export class AppComponent implements OnInit {
 
   private _printFormValues() {
     this.form.valueChanges.subscribe((formValues) => {
-      this.formValuesJson = JSON.stringify(formValues, null, 2) // Guárdalo como string bonito
+      this.formValuesJson = JSON.stringify(formValues, null, 2) 
     })
   }
 
