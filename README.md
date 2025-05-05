@@ -1,5 +1,19 @@
 # Workshop: Desarrollo de Formularios Dinámicos con Formly
 
+
+## Workflow
+
+1. Cada lider del equipo debera hacer un fork de este proyecto
+2. Añadirá como colaboradores a los diferentes miembros del equipo
+3. Creará una rama por seccion
+4. Importará el proyecto en **StackBlitz**
+5. Para acceder al proyecto los miembros del equipo deberan acceder a https://stackblitz.com/github/<<nombre_cuenta_lead>>/<<nombre_repositorio>>
+6. Cada miembro se situará en la rama correspondiente y desarrollará su tarea
+7. Al teminar hará commit y push pulsando el bóton azul de la parte superior izquierda
+   ![image](https://github.com/user-attachments/assets/3c36eb1e-5339-4019-84d5-b84afd4a2676)
+8. Se mergearán las ramas de las diferentes secciones y se hara una prueba en conjunto del formulario
+9. El formulario deberá cumplir con todos los requisitos
+
 ## Caso Práctico
 
 Desde **Santander SCIB**, se nos ha solicitado desarrollar una herramienta para registrar los bugs que se producen en los diferentes proyectos tecnológicos. Dado que el alta de incidencias requiere manejar información variable y validaciones complejas, hemos decidido utilizar **Formly** para simplificar el desarrollo.
@@ -8,7 +22,9 @@ El cliente ha solicitado un formulario dividido en **5 secciones**: **Informador
 
 ---
 
-> Todos los campos y propiedades acompañados de **(Bonus)** son tareas secundarias. Asegúrate primero de acabar tu sección. Una vez finalizada, realiza las tareas bonus. Al final del documento encontrarás tareas opcionales por si aún te sigue sobrando tiempo
+> Todos los campos y propiedades acompañados de **(Bonus)** son tareas secundarias. Asegúrate primero de acabar tu sección. Una vez finalizada, realiza las tareas bonus. Al final del documento encontrarás tareas opcionales por si aún te sigue sobrando tiempo.
+
+> Comprobarás que ciertos campos bonus de las secciones 4 y 5 dependen de los valores seleccionados en la sección 3. Por lo que hasta que no se integren todos las features deberás simular un valor por defecto
 
 
 ## Requerimientos del Formulario
@@ -264,8 +280,6 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 - Todos los campos requeridos deben mostrar el mensaje: **“Campo requerido”** si no son validos
 
 - Se ha incluido el boton **reset**, al finalizar todas las acciones se debera incluir la logica de Formly que permite resetear el valor de los formularios
-
-- Ciertos campos de las secciones 4 y 5 dependen de los valores seleccionados en la sección 3. Hasta que no se integren todos las features simula un valor por defecto
   
 - Si el switch **SCIB Global** está activado, todos los inputs deben tener un color rojo; de lo contrario, azul
 
@@ -275,15 +289,3 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 
 ---
 
-## Workflow
-
-1. Cada lider del equipo debera hacer un fork de este proyecto
-2. Añadirá como colaboradores a los diferentes miembros del equipo
-3. Creará una rama por seccion
-4. Importará el proyecto en **StackBlitz**
-5. Para acceder al proyecto los miembros del equipo deberan acceder a https://stackblitz.com/github/<<nombre_cuenta_lead>>/<<nombre_repositorio>>
-6. Cada miembro se situará en la rama correspondiente y desarrollará su tarea
-7. Al teminar hará commit y push pulsando el bóton azul de la parte superior izquierda
-   ![image](https://github.com/user-attachments/assets/3c36eb1e-5339-4019-84d5-b84afd4a2676)
-8. Se mergearán las ramas de las diferentes secciones y se hara una prueba en conjunto del formulario
-9. El formulario deberá cumplir con todos los requisitos
