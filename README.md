@@ -267,3 +267,18 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 - Utilizar el servicio de traducciones para que los label de cada campo cambien segun en idioma seleccionado
 
 ¡Manos a la obra! 🚀
+
+---
+
+## Workflow
+
+1. Cada lider del equipo debera hacer un fork de este proyecto
+2. Añadirá como colaboradores a los diferentes miembros del equipo
+3. Creará una rama por seccion
+4. Importará el proyecto en **StackBlitz**
+5. Para acceder al proyecto los miembros del equipo deberan acceder a https://stackblitz.com/github/<<nombre_cuenta_lead>>/<<nombre_repositorio>>
+6. Cada miembro se situará en la rama correspondiente y desarrollará su tarea
+7. Al teminar hará commit y push pulsando el bóton azul de la parte superior izquierda
+   ![image](https://github.com/user-attachments/assets/3c36eb1e-5339-4019-84d5-b84afd4a2676)
+8. Se mergearán las ramas de las diferentes secciones y se hara una prueba en conjunto del formulario
+9. El formulario deberá cumplir con todos los requisitos
