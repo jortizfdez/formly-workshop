@@ -8,6 +8,9 @@ El cliente ha solicitado un formulario dividido en **5 secciones**: **Informador
 
 ---
 
+> Todos los campos y propiedades acompañados de **(Bonus)** son tareas secundarias. Asegúrate primero de acabar tu sección. Una vez finalizada, realiza las tareas bonus. Al final del documento encontrarás tareas opcionales por si aún te sigue sobrando tiempo
+
+
 ## Requerimientos del Formulario
 
 ### **1. Informador**
@@ -175,7 +178,7 @@ Esta sección incluye los siguientes campos:
 
   - **Readonly**: TRUE si el switch **SCIB Global** está activado.
     
-  - **Readonly Bonus**: TRUE Si es una aplicación **cliente**, el Entorno es **PRO** y **SCIB Global** está activado.
+  - **Readonly (Bonus)**: TRUE Si es una aplicación **cliente**, el Entorno es **PRO** y **SCIB Global** está activado.
 
   - **Autocompletar valor**: `Grave` si es una aplicación cliente y el Entorno es `PRO`.
 
@@ -256,7 +259,7 @@ Es obligatorio crear un wrapper con Formly llamado "acordeon", usando el compone
 
 ---
 
-## Bonus
+## Opcional
 
 - Todos los campos requeridos deben mostrar el mensaje: **“Campo requerido”** si no son validos
 
