@@ -38,7 +38,34 @@ export class AppComponent implements OnInit {
         {
           props: { label: 'Detail' },
           fieldGroup: [
-            //Configura aqui la seccion 2
+            {
+              key: 'title',
+              type: 'text',
+              props: {
+                label: 'Title',
+                required: true
+              }
+            },
+            {
+              key: 'bugDescription',
+              type: 'textarea',
+              props: {
+                label: 'Bug description',
+                required: false
+              },
+              validators: {
+                validation: ['min50char'] //TODO
+              }
+            },
+            {
+              key: 'geography',
+              type: 'select',
+              props: {
+                label: 'Geography',
+                required: true,
+                options:['ES', 'GB', 'PT', 'GLOBAL']
+              }
+            }
           ],
         },
         {
