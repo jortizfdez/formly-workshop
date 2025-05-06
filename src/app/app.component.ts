@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
                 required: false
               },
               validators: {
-                validation: ['min50char'] //TODO
+                validation: ['min50char'] ////TODO
               }
             },
             {
