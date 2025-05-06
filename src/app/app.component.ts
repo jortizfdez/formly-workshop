@@ -25,6 +25,8 @@ export class AppComponent implements OnInit {
     language: 'en',
   })
 
+  scibGlobalSwitch= false
+
   fields: FormlyFieldConfig[] = [
     {
       type: 'stepper',
@@ -40,10 +42,11 @@ export class AppComponent implements OnInit {
           fieldGroup: [
             {
               key: 'title',
-              type: 'text',
+              type: 'input',
               props: {
                 label: 'Title',
-                required: true
+                required: true,
+                type:'text'
               }
             },
             {
@@ -51,10 +54,9 @@ export class AppComponent implements OnInit {
               type: 'textarea',
               props: {
                 label: 'Bug description',
-                required: false
-              },
-              validators: {
-                validation: ['min50char'] ////TODO
+                type: 'text-area',
+                required: false,
+                minLength: 50
               }
             },
             {
@@ -62,8 +64,28 @@ export class AppComponent implements OnInit {
               type: 'select',
               props: {
                 label: 'Geography',
+                type: 'select-input',
                 required: true,
-                options:['ES', 'GB', 'PT', 'GLOBAL']
+                options:[
+                  {label: 'ES', value : 'ES' }, 
+                  {label: 'GB', value : 'GB' },
+                  {label: 'PT', value : 'PT' },
+                  {label: 'GLOBAL', value : 'GLOBAL' },
+                ]
+              },
+              expressions: {
+                'props.disabled': (field: FormlyFieldConfig) => {
+                  return this.scibGlobalSwitch;
+                },
+                'model.geography': (field: FormlyFieldConfig) => {
+                  if(this.scibGlobalSwitch){
+                    return 'GLOBAL'
+                  }else {
+                    return null
+                  }
+                }
+              
+               
               }
             }
           ],
@@ -101,7 +123,11 @@ export class AppComponent implements OnInit {
 
   private _getIsScibGlobal() {
     this.scibForm.valueChanges.subscribe((values) => {
-      // Añade aqui el codigo necesario para poder hacer dinamicos los campos que requieren el valor de SCIB y el idioma
+      if (!values.scibGlobal){
+        this.scibGlobalSwitch= false
+      }else{
+        this.scibGlobalSwitch= true
+      }
     })
   }
 
