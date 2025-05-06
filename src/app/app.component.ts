@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
+import { AppService } from './services/app.service'
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
     { value: 'es', viewValue: 'Es' },
   ]
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder , private _appService:AppService) {}
 
   form = new FormGroup({})
   model: any = {}
@@ -30,9 +31,53 @@ export class AppComponent implements OnInit {
       type: 'stepper',
       fieldGroup: [
         {
-          props: { label: 'Reporter' },
           fieldGroup: [
-            //Configura aqui la seccion 1
+            {
+              key:'employee-number',
+            type :'input',
+            validators:{
+              min:{
+
+              }
+            },
+            props:{
+              label:'Numero empleado',
+              required:true,
+              options:[
+                
+              ]
+            }
+          },
+            {
+            key:'rol',
+            type :'select',
+            validators:{
+              min:{
+                
+              }
+            },
+            props:{
+              label:'Rol informador',
+              required:true,
+              options:
+                this._appService.getRoles()
+              
+            }
+          },
+            {key:'responsable',
+            type :'select',
+            resetOnHide:true,
+            validators:{
+              min:{
+                
+              }
+            },
+            props:{
+              label:'responsable',
+              required:true,
+              options:['n1111', 'n2222']
+            }
+          }
           ],
         },
         {
@@ -67,7 +112,6 @@ export class AppComponent implements OnInit {
     this._getIsScibGlobal()
     this._printFormValues()
   }
-
   reset() {
     //Añade el codigo necesario para resetear el formulario
   }
