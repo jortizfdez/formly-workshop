@@ -33,7 +33,7 @@ import { MatSelectModule } from '@angular/material/select'
 
     FormlyModule.forRoot({
       /* Añade aqui todos los modulos que necesites */
-      types: [{ name: 'stepper', component: FormlyFieldStepper, wrappers: [] }],
+      types: [{ name: 'stepper', component: FormlyFieldStepper, wrappers: [] },],
     }),
   ],
   providers: [],
