@@ -12,6 +12,10 @@ import { MatStepperModule } from '@angular/material/stepper'
 import { MatButtonModule } from '@angular/material/button'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatSelectModule } from '@angular/material/select'
+import { FormlyFieldTextArea } from '@ngx-formly/bootstrap/textarea'
+import { FormlyFieldInput } from '@ngx-formly/bootstrap/input'
+import { FormlyFieldSelect } from '@ngx-formly/bootstrap/select'
+import { FormlyFieldRadio } from '@ngx-formly/bootstrap/radio'
 
 @NgModule({
   declarations: [AppComponent, FormlyFieldStepper],
@@ -33,7 +37,15 @@ import { MatSelectModule } from '@angular/material/select'
 
     FormlyModule.forRoot({
       /* Añade aqui todos los modulos que necesites */
-      types: [{ name: 'stepper', component: FormlyFieldStepper, wrappers: [] }],
+      types: [
+        { name: 'stepper', component: FormlyFieldStepper, wrappers: [] },
+        { name: 'text', component: FormlyFieldInput, wrappers: [] },
+        { name: 'textarea', component: FormlyFieldTextArea, wrappers: [] },
+        { name: 'select', component: FormlyFieldSelect, wrappers: [] },
+        { name: 'radiobutton', component: FormlyFieldRadio, wrappers: [] },
+      ],
+    
+
     }),
   ],
   providers: [],
