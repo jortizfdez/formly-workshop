@@ -49,8 +49,7 @@ export function isEmployeeValidator(control: AbstractControl): ValidationErrors 
       types: [
         { name: 'stepper', component: FormlyFieldStepper, wrappers: [] },
         { name: 'text', component: FormlyFieldInput, wrappers: [] },
-        { name: 'textarea', component: FormlyFieldTextArea, wrappers: [] },
-        { name: 'select', component: FormlyFieldSelect, wrappers: [] },
+        { name: 'text-area', component: FormlyFieldTextArea, wrappers: [] },
         { name: 'radiobutton', component: FormlyFieldRadio, wrappers: [] },
       ],
       validationMessages: [
